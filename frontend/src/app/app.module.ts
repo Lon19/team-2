@@ -15,6 +15,8 @@ import {
 } from '@nebular/theme';
 import { MenuComponent } from './menu/menu.component';
 import {NbEvaIconsModule} from '@nebular/eva-icons';
+import {HttpClientModule} from '@angular/common/http';
+import {ApiService} from './http/api.service';
 
 @NgModule({
   declarations: [
@@ -29,9 +31,10 @@ import {NbEvaIconsModule} from '@nebular/eva-icons';
     NbSidebarModule.forRoot(),
     NbButtonModule,
     NbMenuModule.forRoot(),
-    NbEvaIconsModule
+    NbEvaIconsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
