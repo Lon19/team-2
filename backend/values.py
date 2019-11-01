@@ -1,0 +1,7 @@
+organisational_culture_q1 = "The people I work with have excellent knowledge of autism"
+organisational_culture_q2 = "I feel that if a new person was to join the team and they disclosed they were autistic, they would be well supported and understood by others"
+organisational_culture_q3 = "I feel that the management of the team are constantly improving their knowledge about autism"
+organisational_culture_q4 = "It is easy to find information within the organisation about supporting autistic employees"
+organisational_culture_q5 = "There are established pathways for autistic people to seek advice and support for managing their daily work activities"
+organisational_culture_q6 = "The organisation has been proactive in making adjustments and providing autism awareness training for employees"
+organisational_culture_q7 = "I think the organisation performs better than other organisations in the sector in terms of quality of support for autistic employees"
