@@ -9,3 +9,4 @@ from django.contrib.auth.models import User
 class HelloWorld(APIView):
     def get(self, request):
         return Response("{'hello': 'world'}")
+
