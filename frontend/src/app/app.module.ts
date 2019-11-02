@@ -20,9 +20,12 @@ import {ApiService} from './http/api.service';
 import {HeaderComponent} from './header/header.component';
 import {LayoutService} from './services/layout.service';
 import {ThemeModule} from './theme.module';
-import {NbIcon} from '@nebular/theme/components/icon/icon';
 import {UserData} from './user/users';
 import {UserService} from './user/users.service';
+import {ECommerceModule} from "./e-commerce/e-commerce.module";
+import {OrdersChartData} from "./e-commerce/charts-panel/orders-chart";
+import {OrdersChartService} from "./e-commerce/charts-panel/orders-chart.service";
+import {PeriodsService} from "./e-commerce/charts-panel/periods.service";
 
 @NgModule({
   declarations: [
@@ -46,12 +49,13 @@ import {UserService} from './user/users.service';
     NbIconModule,
     NbUserModule,
     NbContextMenuModule,
-    NbButtonModule
+    NbButtonModule,
+    ECommerceModule,
   ],
   providers: [
     ApiService,
     LayoutService,
-    {provide: UserData, useClass: UserService}
+    {provide: UserData, useClass: UserService},
   ],
   bootstrap: [AppComponent]
 })
