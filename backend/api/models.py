@@ -93,3 +93,11 @@ class ChestionarOrganizationalCulture(models.Model):
 class User(models.Model):
     user_id = models.IntegerField()
     user_name = models.CharField(max_length=100, default='')
+    gender = models.CharField(max_length=100, default='')
+    age = models.CharField(max_length=100, default='')
+    diagnosis = models.CharField(max_length=100, default='')
+    income = models.CharField(max_length=100, default='')
+    education = models.CharField(max_length=100, default='')
+    ethnicity = models.CharField(max_length=100, default='')
+    password = models.CharField(max_length=100, default='')
+    email = models.CharField(max_length=100, default='')
