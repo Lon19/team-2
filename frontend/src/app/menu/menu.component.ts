@@ -9,9 +9,14 @@ import {NbMenuItem} from '@nebular/theme';
 export class MenuComponent implements OnInit {
   items: NbMenuItem[] = [
     {
-      title: 'home',
+      title: 'Home',
       link: '/',
       icon: 'home-outline'
+    },
+    {
+      title: 'About us',
+      url: 'https://www.autistica.org.uk/about-us/about-us',
+      icon: 'info'
     }
   ];
 
