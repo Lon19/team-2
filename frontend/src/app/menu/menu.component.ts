@@ -14,16 +14,15 @@ export class MenuComponent implements OnInit {
       icon: 'home-outline'
     },
     {
-      title: 'About us',
-      url: 'https://www.autistica.org.uk/about-us/about-us',
-      icon: 'info'
-    },
-    {
       title: 'Mental Health Progress',
       url: '/',
       icon: 'activity-outline'
+    },
+    {
+      title: 'About us',
+      url: 'https://www.autistica.org.uk/about-us/about-us',
+      icon: 'info'
     }
-
   ];
 
   constructor() { }
