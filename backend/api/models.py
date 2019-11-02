@@ -4,9 +4,8 @@ from django.db import models
 
 
 class ChestionarMentalHealth(models.Model):
-    user_id = models.IntegerField()
     form_name = models.CharField(max_length=100, default='')
-    date = models.DateTimeField()
+    user_id = models.IntegerField()
     q1 = models.CharField(max_length=100, default='')
     q2 = models.CharField(max_length=100, default='')
     q3 = models.CharField(max_length=100, default='')
@@ -28,23 +27,23 @@ class ChestionarMentalHealth(models.Model):
     q19 = models.CharField(max_length=100, default='')
     q20 = models.CharField(max_length=100, default='')
     q21 = models.CharField(max_length=100, default='')
+    date = models.DateTimeField()
 
 
 class ChestionarAdjustments(models.Model):
-    user_id = models.IntegerField()
     form_name = models.CharField(max_length=100, default='')
-    date = models.DateTimeField()
+    user_id = models.IntegerField()
     q1 = models.CharField(max_length=100, default='')
     q2 = models.CharField(max_length=100, default='')
     q3 = models.CharField(max_length=100, default='')
     q4 = models.CharField(max_length=100, default='')
     q5 = models.CharField(max_length=100, default='')
+    date = models.DateTimeField()
 
 
 class ChestionarSelfConfidence(models.Model):
-    user_id = models.IntegerField()
     form_name = models.CharField(max_length=100, default='')
-    date = models.DateTimeField()
+    user_id = models.IntegerField()
     q1 = models.CharField(max_length=100, default='')
     q2 = models.CharField(max_length=100, default='')
     q3 = models.CharField(max_length=100, default='')
@@ -75,12 +74,12 @@ class ChestionarSelfConfidence(models.Model):
     q28 = models.CharField(max_length=100, default='')
     q29 = models.CharField(max_length=100, default='')
     q30 = models.CharField(max_length=100, default='')
+    date = models.DateTimeField()
 
 
 class ChestionarOrganizationalCulture(models.Model):
-    user_id = models.IntegerField()
     form_name = models.CharField(max_length=100, default='')
-    date = models.DateTimeField()
+    user_id = models.IntegerField()
     q1 = models.CharField(max_length=100, default='')
     q2 = models.CharField(max_length=100, default='')
     q3 = models.CharField(max_length=100, default='')
@@ -88,6 +87,7 @@ class ChestionarOrganizationalCulture(models.Model):
     q5 = models.CharField(max_length=100, default='')
     q6 = models.CharField(max_length=100, default='')
     q7 = models.CharField(max_length=100, default='')
+    date = models.DateTimeField()
 
 
 class User(models.Model):
