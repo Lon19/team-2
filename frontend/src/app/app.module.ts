@@ -28,6 +28,7 @@ import {MentalHealthService} from './logic/mentalHealth/mentalHealthService';
 import {ChartjsRadarComponent} from './charts/chartjs/chartjs-radar.component';
 import {ChartjsComponent} from './charts/chartjs/chartjs.component';
 import {ChartModule} from 'angular2-chartjs';
+import { MentalHealthComponent } from './mental-health/mental-health.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {ChartModule} from 'angular2-chartjs';
     ChartjsRadarComponent,
     ChartjsComponent,
     HeaderComponent,
-    CardComponent
+    CardComponent,
+    MentalHealthComponent
   ],
   imports: [
     BrowserModule,
