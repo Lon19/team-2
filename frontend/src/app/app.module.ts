@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import {
   DARK_THEME,
   DEFAULT_THEME, NbActionsModule,
-  NbButtonModule, NbContextMenuModule, NbIconModule,
+  NbButtonModule, NbCardModule, NbContextMenuModule, NbIconModule,
   NbLayoutModule,
   NbMenuModule, NbSearchModule, NbSelectModule,
   NbSidebarModule,
@@ -23,12 +23,14 @@ import {ThemeModule} from './theme.module';
 import {NbIcon} from '@nebular/theme/components/icon/icon';
 import {UserData} from './user/users';
 import {UserService} from './user/users.service';
+import {CardComponent, CardComponentProvider} from './card-view/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    HeaderComponent
+    HeaderComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -46,11 +48,14 @@ import {UserService} from './user/users.service';
     NbIconModule,
     NbUserModule,
     NbContextMenuModule,
-    NbButtonModule
+    NbButtonModule,
+    NbCardModule,
+    HttpClientModule
   ],
   providers: [
     ApiService,
     LayoutService,
+    CardComponentProvider,
     {provide: UserData, useClass: UserService}
   ],
   bootstrap: [AppComponent]
