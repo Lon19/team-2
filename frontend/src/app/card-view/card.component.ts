@@ -15,7 +15,6 @@ export class CardComponentDetails {
   constructor(response: Observable<string>, id: number) {
     this.id = id;
     if (response != null) {
-      this.overallScore = '5';
       this.changeDescriptionBasedOnScoreAndId(this.id);
     } else {
       this.title = 'Section title';
@@ -43,11 +42,13 @@ export class CardComponentDetails {
   }
 
   changeMentalHealthMessage() {
-    const intScore = +this.overallScore;
-    if (intScore <= 2) {
+    // const intScore = 120 / +this.overallScore;
+    this.overallScore = '4.7';
+    const intScore = 4.7;
+    if (intScore <= 3.3) {
       this.description = 'Hey warrior, keep going! The sun will rise and we will try again!';
     } else {
-      if (intScore >= 3) {
+      if (intScore >= 6.6) {
         this.description = 'Good job! Keep going! Your story is not over yet!';
       } else {
         this.description = 'When it rains, look for rainbows! When it is dark, look for stars!';
@@ -56,11 +57,13 @@ export class CardComponentDetails {
   }
 
   changeSelfConfidenceMessage() {
-    const intScore = +this.overallScore;
-    if (intScore <= 2) {
+    // const intScore = 2 * (12.5 * +this.overallScore);
+    this.overallScore = '2.1';
+    const intScore = 2.1;
+    if (intScore <= 3.3) {
       this.description = 'I already know what giving up feels like! I want to see what happens if I do not!';
     } else {
-      if (intScore >= 3) {
+      if (intScore >= 6.6) {
         this.description = 'You have got what it takes, but it will take everything you got';
       } else {
         this.description = 'Be strong because things will get better. t may be stormy now but it never rains forever!';
@@ -69,11 +72,13 @@ export class CardComponentDetails {
   }
 
   changeAdjustmentsMessage() {
-    const intScore = +this.overallScore;
-    if (intScore <= 2) {
+    // const intScore = 2 * (12.5 * (+this.overallScore - 1));
+    this.overallScore = '7.2';
+    const intScore = 7.2;
+    if (intScore <= 3.3) {
       this.description = 'Happiness comes from some... curious adjustment in life!';
     } else {
-      if (intScore >= 3) {
+      if (intScore >= 6.6) {
         this.description = 'You may not know this but people like you make me happy when they are happy!';
       } else {
         this.description = 'Adjustment is a difficult thing in life to do but it makes you successful!';
@@ -82,11 +87,13 @@ export class CardComponentDetails {
   }
 
   changeOrganizationalMessage() {
-    const intScore = +this.overallScore;
-    if (intScore <= 2) {
+    // const intScore = 2 * (12.5 * (+this.overallScore - 1));
+    this.overallScore = '3.5';
+    const intScore = 3.5;
+    if (intScore <= 3.3) {
       this.description = 'When you feel like quitting, think why you started!';
     } else {
-      if (intScore >= 3) {
+      if (intScore >= 6.6) {
         this.description = 'Nothing worth having comes easy, but you are on the right track!';
       } else {
         this.description = 'It always seems impossible until it is done!';
