@@ -23,5 +23,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^helloworld/', HelloWorld.as_view()),
     url(r'^users/list/', ListUsers.as_view()),
+    url(r'^q/mental-health/list/', ListChestionarMentalHealth.as_view()),
+    url(r'^q/self-confidence/list/', ListChestionarSelfConfidence.as_view()),
+    url(r'^q/organizational-culture/list/', ListChestionarOrganizationalCulture.as_view()),
+    url(r'^q/adjustments/list/', ListChestionarAdjustments.as_view()),
     url(r'^.*', TemplateView.as_view(template_name="home.html"), name="home")
 ]
