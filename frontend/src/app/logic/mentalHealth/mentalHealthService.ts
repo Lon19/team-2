@@ -75,7 +75,7 @@ export class MentalHealthService {
     return questionnaire.pipe(
       take(1),
       map(value => {
-        return value.map(element => {
+        return value.sort((quest1, quest2 ) =>  (new Date(quest1.date) as any) - (new Date(quest2.date) as any)).map(element => {
           return MentalHealthService.calculateMentalHealthScore(element);
         });
       })
