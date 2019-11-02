@@ -1,4 +1,4 @@
-import {Component, Injectable, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Injectable, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ApiService} from '../http/api.service';
 import {Observable} from 'rxjs';
@@ -22,7 +22,7 @@ export class CardComponentDetails {
       this.overallScore = '--';
       this.description = 'Could not retrieve data. Please refresh page!';
     }
-    this.buttonText = 'Expand';
+    this.buttonText = 'Reveal';
   }
 
   changeDescriptionBasedOnScoreAndId(id: number) {
@@ -129,6 +129,7 @@ export class CardComponentProvider {
   // tslint:disable-next-line:component-selector
   selector: 'card-component',
   templateUrl: './card.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
