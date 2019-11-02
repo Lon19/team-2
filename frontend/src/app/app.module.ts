@@ -23,10 +23,11 @@ import {ThemeModule} from './theme.module';
 import {UserData} from './user/users';
 import {UserService} from './user/users.service';
 import {CardComponent, CardComponentProvider} from './card-view/card.component';
-import {ECommerceModule} from "./e-commerce/e-commerce.module";
-import {OrdersChartData} from "./e-commerce/charts-panel/orders-chart";
-import {OrdersChartService} from "./e-commerce/charts-panel/orders-chart.service";
-import {PeriodsService} from "./e-commerce/charts-panel/periods.service";
+import {ECommerceModule} from './e-commerce/e-commerce.module';
+import {MentalHealthService} from './logic/mentalHealth/mentalHealthService';
+import {ChartjsRadarComponent} from './charts/chartjs/chartjs-radar.component';
+import {ChartjsComponent} from './charts/chartjs/chartjs.component';
+import {ChartModule} from 'angular2-chartjs';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import {PeriodsService} from "./e-commerce/charts-panel/periods.service";
     ApiService,
     LayoutService,
     CardComponentProvider,
+    MentalHealthService,
     {provide: UserData, useClass: UserService},
   ],
   bootstrap: [AppComponent]
