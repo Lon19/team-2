@@ -22,5 +22,6 @@ from api.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^helloworld/', HelloWorld.as_view()),
+    url(r'^users/list/', ListUsers.as_view()),
     url(r'^.*', TemplateView.as_view(template_name="home.html"), name="home")
 ]
