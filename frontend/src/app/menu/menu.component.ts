@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
     },
     {
       title: 'Mental Health Progress',
-      url: '/',
+      url: '/health',
       icon: 'activity-outline'
     },
     {
