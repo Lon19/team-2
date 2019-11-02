@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import {
   DARK_THEME,
   DEFAULT_THEME, NbActionsModule,
-  NbButtonModule, NbContextMenuModule, NbIconModule,
+  NbButtonModule, NbCardModule, NbContextMenuModule, NbIconModule,
   NbLayoutModule,
   NbMenuModule, NbSearchModule, NbSelectModule,
   NbSidebarModule,
@@ -22,6 +22,7 @@ import {LayoutService} from './services/layout.service';
 import {ThemeModule} from './theme.module';
 import {UserData} from './user/users';
 import {UserService} from './user/users.service';
+import {CardComponent, CardComponentProvider} from './card-view/card.component';
 import {ECommerceModule} from "./e-commerce/e-commerce.module";
 import {OrdersChartData} from "./e-commerce/charts-panel/orders-chart";
 import {OrdersChartService} from "./e-commerce/charts-panel/orders-chart.service";
@@ -31,7 +32,8 @@ import {PeriodsService} from "./e-commerce/charts-panel/periods.service";
   declarations: [
     AppComponent,
     MenuComponent,
-    HeaderComponent
+    HeaderComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -51,10 +53,14 @@ import {PeriodsService} from "./e-commerce/charts-panel/periods.service";
     NbContextMenuModule,
     NbButtonModule,
     ECommerceModule,
+    NbButtonModule,
+    NbCardModule,
+    HttpClientModule
   ],
   providers: [
     ApiService,
     LayoutService,
+    CardComponentProvider,
     {provide: UserData, useClass: UserService},
   ],
   bootstrap: [AppComponent]
