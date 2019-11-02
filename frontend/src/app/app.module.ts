@@ -27,7 +27,7 @@ import {ApiService} from './http/api.service';
     BrowserModule,
     AppRoutingModule,
     NbLayoutModule,
-    NbThemeModule.forRoot({name: 'default'}),
+    NbThemeModule.forRoot({name: 'corporate'}),
     NbSidebarModule.forRoot(),
     NbButtonModule,
     NbMenuModule.forRoot(),
