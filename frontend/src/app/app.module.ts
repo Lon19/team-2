@@ -33,6 +33,9 @@ import {PeriodsService} from "./e-commerce/charts-panel/periods.service";
     AppComponent,
     MenuComponent,
     HeaderComponent,
+    ChartjsRadarComponent,
+    ChartjsComponent,
+    HeaderComponent,
     CardComponent
   ],
   imports: [
@@ -53,6 +56,8 @@ import {PeriodsService} from "./e-commerce/charts-panel/periods.service";
     NbContextMenuModule,
     NbButtonModule,
     ECommerceModule,
+    NbCardModule,
+    ChartModule,
     NbButtonModule,
     NbCardModule,
     HttpClientModule
