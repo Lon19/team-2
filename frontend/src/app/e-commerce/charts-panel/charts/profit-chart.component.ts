@@ -121,7 +121,7 @@ export class ProfitChartComponent implements AfterViewInit, OnDestroy, OnChanges
           data: this.profitChartData.data[0],
         },
         {
-          name: 'Payment',
+          name: ' Payment',
           type: 'bar',
           barWidth: '20%',
           itemStyle: {
