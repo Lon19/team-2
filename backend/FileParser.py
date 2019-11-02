@@ -80,7 +80,7 @@ def parseToDb():
             questionnaire.save()
     csvFile.close()
 
-    # Mental Health Questionnaire
+    # Work Self Confidence Questionnaire
     filename = 'wpforms-Autistica-8211-Work-Self-Confidence.csv'
     with open(filename, 'r') as csvFile:
         reader = csv.reader(csvFile)
@@ -123,3 +123,15 @@ def parseToDb():
                                                      date=timezone.make_aware(datetime.strptime(response[32], '%m/%d/%Y')))
             questionnaire.save()
     csvFile.close()
+
+    # Participant attribute data
+    filename = 'Participant-attribute-data.csv'
+    with open(filename, 'r') as csvFile:
+        reader = csv.reader(csvFile)
+        next(reader, None)
+        for response in reader:
+            response.insert(0, response[0])
+            questionnaire = User(*response)
+            questionnaire.save()
+    csvFile.close()
+
