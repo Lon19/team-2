@@ -17,7 +17,13 @@ export class MenuComponent implements OnInit {
       title: 'About us',
       url: 'https://www.autistica.org.uk/about-us/about-us',
       icon: 'info'
+    },
+    {
+      title: 'Mental Health Progress',
+      url: '/',
+      icon: 'activity-outline'
     }
+
   ];
 
   constructor() { }
