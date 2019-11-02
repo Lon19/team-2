@@ -19,6 +19,13 @@ class ListUsers(APIView):
         return Response(serializer.data)
 
 
+class GetUser(APIView):
+    def get(self, request, uid):
+        users = User.objects.get(user_id=uid)
+        serializer = UserSerializer(users)
+        return Response(serializer.data)
+
+
 class ListChestionarMentalHealth(APIView):
     def get(self, request):
         foo = ChestionarMentalHealth.objects.all()
