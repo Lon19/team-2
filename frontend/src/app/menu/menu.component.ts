@@ -12,10 +12,6 @@ export class MenuComponent implements OnInit {
       title: 'home',
       link: '/',
       icon: 'home-outline'
-    },
-    {
-      title: 'dashboard',
-      link: 'dashboard'
     }
   ];
 
