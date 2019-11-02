@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from api import models
 from rest_framework import authentication, permissions
 from django.contrib.auth.models import User
+from api.serializers import *
 
 
 # Create your views here.
@@ -14,5 +15,6 @@ class HelloWorld(APIView):
 
 class ListUsers(APIView):
     def get(self, request):
-        usernames = [user.user_name for user in models.User.objects.all()]
-        return Response(usernames)
+        users = models.User.objects.all()
+        serializer = UserSerializer(users, many=True)
+        return Response(serializer.data)
