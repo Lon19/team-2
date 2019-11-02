@@ -11,10 +11,4 @@ import {MentalHealthQuestionnaire} from './logic/mentalHealth/mentalHealthQuesti
 })
 export class AppComponent {
   title = 'my-new-project';
-  mental: Observable<MentalHealthQuestionnaire[]>;
-
-  constructor(apiService: ApiService,
-              mentalHealthService: MentalHealthService) {
-    this.mental = mentalHealthService.getHealthPlan(22222222);
-  }
 }

@@ -8,9 +8,6 @@
   </nb-sidebar>
 
   <nb-layout-column>
-    <div *ngIf="mental | async as mental">
-      Page Content {{mental[mental.length - 1].date}}
-    </div>
     <ngx-chartjs></ngx-chartjs>
     <ngx-ecommerce-charts></ngx-ecommerce-charts>
     <card-component></card-component>
