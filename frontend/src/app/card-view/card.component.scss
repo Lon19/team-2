@@ -14,3 +14,34 @@
   flex: 1 0 calc(50% - 1rem);
   margin: 0 0.5rem;
 }
+
+div.card1-font {
+  font-size: 1000%;
+  padding-top: 50px;
+  color: crimson;
+}
+
+div.card2-font {
+  font-size: 1000%;
+  padding-top: 50px;
+  color: turquoise;
+}
+
+div.card3-font {
+  font-size: 1000%;
+  padding-top: 50px;
+  color: gold;
+}
+
+div.card4-font {
+  font-size: 1000%;
+  padding-top: 50px;
+  color: cornflowerblue;
+}
+
+div.additionalText {
+  padding-top: 80px;
+  font-size: 150%;
+  font-style: italic;
+  font-family: monospace;
+}
